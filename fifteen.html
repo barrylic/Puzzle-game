@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+The 15 sliding puzzle created in javascript, objective is to arrange images in correct order.
+
+extra features
+- end-of-game notification 
+- animations and/or transitions
+- game time
+- multiple backgrounds
+-->
+<head>
+    <meta charset="UTF-8">
+    <title>Artifact</title>
+    <link rel="stylesheet" href="stylesheet.css" />
+</head>
+<body onload="Gamebagin()">
+    <div id="wrapper">
+        <h1>Artifact</h1>
+
+        <span id="win"></span>
+
+        <select id="characters" name="characters" title="Backgrounds" onchange="changeBackground()">
+            <option value="mario" id="mario"> Mario</option>
+            <option value="luigi" id="luigi">Luigi</option>
+            <option value="mariao2" id="mariao2">Mario 2</option>
+            <option value="fog" id="fog">Fog Monster</option>
+            <option value="teemo" id="teemo">Teemo</option>
+
+        </select>
+        <div class="container">
+          <h4 id="timer">Time: 0s</h4>
+          <h4 id="moves">Moves: 0</h4>
+        </div>
+
+        <div id="main">
+            <div id="one"      class="tile">1</div>
+            <div id="two"      class="tile">2</div>
+            <div id="three"    class="tile">3</div>
+            <div id="four"     class="tile">4</div>
+            <div id="five"     class="tile">5</div>
+            <div id="six"      class="tile">6</div>
+            <div id="seven"    class="tile">7</div>
+            <div id="eight"    class="tile">8</div>
+            <div id="nine"     class="tile">9</div>
+            <div id="ten"      class="tile">10</div>
+            <div id="eleven"   class="tile">11</div>
+            <div id="twelve"   class="tile">12</div>
+            <div id="thirteen" class="tile">13</div>
+            <div id="fourteen" class="tile">14</div>
+            <div id="fifteen"  class="tile">15</div>
+            <div id="sixteen"  class="tile"></div>
+        </div>
+
+        <button onclick="shuffle()">Shuffle</button>
+
+        <form>  
+            <center><b> Select a background! </b>  </center>
+          <select id = "page_background" onchange = "backgroundSelect(value)" >  
+          <option> ---Choose a Background--- </option>  
+          <option value="bkg1" >Moon night</option>  
+          <option value="bkg2">Spring</option>  
+          <option value="bkg3">Water</option>  
+          <option value="bkg4">Mountains</option>  
+          </select>    
+        </form>  
+    <audio hidden id="music">
+      <source type="audio/mpeg">
+    </audio>
+
+    <script type="text/javascript" src="fifteen.js"></script>
+</body>
+</html>
